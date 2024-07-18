@@ -1,5 +1,5 @@
-const shapes = require('./lib/shapes.js');
+const Shape = require('./Develop/lib/shapes'); 
 
-const shapes = new shapes();
+const shapeInstance = new Shape(); 
 
-shapes.run();
+shapeInstance.run(); 
