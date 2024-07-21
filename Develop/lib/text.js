@@ -7,7 +7,13 @@ async function getText() {
         message: 'Enter up to three characters for your logo text:'
     });
 
-    return answer.text.slice(0, 3); // Ensure only the first three characters are taken
+    return answer.text.slice(0, 3); 
 }
 
-module.exports = { getText };
+// text.js
+
+function validateInputLength(input) {
+    return input.length > 0 && input.length <= 3;
+}
+
+module.exports = { getText, validateInputLength };
