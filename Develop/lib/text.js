@@ -1,3 +1,4 @@
+// text.js
 const inquirer = require('inquirer');
 
 async function getText() {
@@ -10,10 +11,17 @@ async function getText() {
     return answer.text.slice(0, 3); 
 }
 
-// text.js
+function insertText(svgString, text) {
+    const svgWidth = 200;
+    const svgHeight = 200;
+    const textX = svgWidth / 2;
+    const textY = svgHeight / 2;
+
+    return svgString.replace('</svg>', `<text x="${textX}" y="${textY}" text-anchor="middle" dominant-baseline="middle" font-size="20">${text}</text></svg>`);
+}
 
 function validateInputLength(input) {
     return input.length > 0 && input.length <= 3;
 }
 
-module.exports = { getText, validateInputLength };
+module.exports = { getText, insertText, validateInputLength };
