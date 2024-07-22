@@ -49,7 +49,7 @@ async function main() {
 
     fs.writeFileSync(path.join(__dirname, filename), svgString);
 
-    console.log(`SVG file "${filename}" saved successfully.`);
+    console.log(`Generated "${filename}".`);
 }
 
 main();
