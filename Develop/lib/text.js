@@ -5,10 +5,16 @@ async function getText() {
     const answer = await inquirer.prompt({
         type: 'input',
         name: 'text',
-        message: 'Enter up to three characters for your logo text:'
+        message: 'Enter up to three characters for your logo text:',
+        validate: function(input) {
+            if (input.trim().length === 0) {
+                return 'Text cannot be blank. Enter up to three characters.';
+            }
+            return true;
+        }
     });
 
-    return answer.text.slice(0, 3); 
+    return answer.text.slice(0, 3);
 }
 
 function insertText(svgString, text) {
