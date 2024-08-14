@@ -4,6 +4,8 @@ Node.js command line application used to generate logos saved as SVG files.
 
 ![alt text](<examples/Screenshot 2024-07-23 181906.png>)
 
+Please  feel free to check out the DEMO by clicking this link: https://drive.google.com/file/d/1TW8LgoXkQrf1jkMpRAdYlr186bjAbOE7/view
+
 ## Description
 
 SVG-Logo-Creator is a Node.js command line application that allows you to generate logos and save them as SVG files. It provides a simple interface to create custom logos based on specified parameters.
